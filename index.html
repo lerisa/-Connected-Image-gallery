@@ -3,81 +3,32 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        html,
-        body {
-            margin: 0px;
-            padding: 0px;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .galleryslide-container {
-            max-width: 620px;
-            position: relative;
-            margin: auto;
-        }
-
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .indicators {
-            text-align: center;
-        }
-
-        .indicator {
-            cursor: pointer;
-            height: 50px;
-            width: 50px;
-            margin: 0 2px;
-            display: inline-block;
-        }
-
-        @media only screen and (max-width: 300px) {
-            .prev,
-            .next {
-                font-size: 11px
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-
     <div class="gallery">
+        <h3>Connected Image/Video Gallery</h3>
         <div class="galleryslide-container">
             <div class="gallerySlides">
-                <img src="images/image1.jpg" style="width:100%">
+                <!-- <img src="images/image1.jpg" style="width:100%"> -->
+                <video preload="auto" autoplay muted>
+                    <source src="http://techslides.com/demos/sample-videos/small.webm?start=19&autoplay=1" type="video/webm">
+                </video>
             </div>
             <div class="gallerySlides">
                 <img src="images/image2.jpg" style="width:100%">
             </div>
             <div class="gallerySlides">
-                <img src="images/image3.jpg" style="width:100%">
+                <!-- <img src="images/image3.jpg" style="width:100%"> -->
+                <div class="video-container">
+                    <iframe  src="https://www.youtube.com/embed/z4JUm0Bq9AM?start=1800&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
             </div>
             <div class="gallerySlides">
                 <img src="images/image4.jpg" style="width:100%">
             </div>
-
             <a class="prev" onclick="nextGallerySlides(-1)">&#10094;</a>
             <a class="next" onclick="nextGallerySlides(1)">&#10095;</a>
         </div>
@@ -90,7 +41,6 @@
             <img src="images/image4.jpg" class="indicator" onclick="currentGallerySlide(4)"></img>
         </div>
     </div>
-
     <script src="myScripts.js"></script>
 </body>
 

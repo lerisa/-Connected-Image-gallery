@@ -1,0 +1,82 @@
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.galleryslide-container {
+    max-width: 620px;
+    position: relative;
+    margin: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.indicators {
+    text-align: center;
+}
+
+.indicator {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    margin: 0 2px;
+    display: inline-block;
+}
+
+.video-container {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56%;
+}
+
+.video-container iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.gallery {
+    padding: 2%;
+}
+
+.gallery>h3 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next {
+        font-size: 11px
+    }
+}
